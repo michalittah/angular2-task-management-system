@@ -1,0 +1,23 @@
+<!--<h3>Top Heroes</h3>-->
+<!--<div class="grid grid-pad">-->
+  <!--<div *ngFor="#hero of heroes" (click)="gotoDetail(hero)" class="col-1-4">-->
+    <!--<div class="module hero">-->
+      <!--<h4>{{hero.name}}</h4>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+
+<div class="boards">
+    <ul class="boards-list">
+        <li *ngFor="#board of boards; #i = index;"
+            [class.selected]="board === selectedBoard"
+            (click)="gotoDetail(board)">
+            <span class="badge">{{i}}</span> <span class="title">{{board.title}}</span>
+        </li>
+    </ul>
+    <!--<div *ngIf="selectedBoard">-->
+        <!--<h2>{{selectedBoard.name | uppercase}} is my hero</h2>-->
+        <!--<button (click)="gotoDetail()">View Details</button>-->
+    <!--</div>-->
+</div>

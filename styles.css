@@ -1,0 +1,19 @@
+h2 {
+    color: #444;
+    font-weight: lighter;
+}
+
+body, input[text], button {
+    color: white;
+    font-family: Cambria, Georgia;
+    background: #0079BF;
+}
+
+button {
+    padding: 0.2em;
+    font-size: 14px
+}
+
+* {
+    font-family: Arial;
+}

@@ -1,0 +1,10 @@
+<div *ngIf="board">
+  <h2>{{board.title}} details!</h2>
+  <div>
+    <label>id: </label>{{board.id}}</div>
+  <div *ngFor="#list of board.list; #i = index;">
+    <label>title: </label>
+    <input [(ngModel)]="list.title" placeholder="name" />
+  </div>
+  <button (click)="goBack()">Back</button>
+</div>
