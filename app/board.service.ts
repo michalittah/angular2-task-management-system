@@ -3,22 +3,28 @@ import {Injectable} from 'angular2/core';
 import {Board} from './board';
 import {Task} from './board';
 import {List} from './board';
-import {BOARDS} from './mock-boards';
+// import {BOARDS} from './mock-boards';
+
+import {LocalStorage, SessionStorage} from "./localStorage/WebStorage";
 
 @Injectable()
 export class BoardService {
+
+    @LocalStorage() public BOARDS:Board[]=[];
+
+
     getBoards() {
-        return Promise.resolve(BOARDS);
+        return Promise.resolve(this.BOARDS);
     }
 
     getBoardsSlowly() {
         return new Promise<Board[]>(resolve =>
-            setTimeout(()=>resolve(BOARDS), 2000) // 2 seconds
+            setTimeout(()=>resolve(this.BOARDS), 2000) // 2 seconds
         );
     }
 
     getBoard(title:string) {
-        return Promise.resolve(BOARDS).then(
+        return Promise.resolve(this.BOARDS).then(
             boards => boards.filter(board => board.title === title)[0]
         );
     }
@@ -30,11 +36,11 @@ export class BoardService {
     }
 
     addBoard(board:Board) {
-        BOARDS.push(board);
+        this.BOARDS.push(board);
     }
 
     removeBoard(index:number) {
-        BOARDS.splice(index, 1);
+        this.BOARDS.splice(index, 1);
     }
 
     addList(list:List, boardTitle:string) {
