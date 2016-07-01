@@ -1,19 +1,43 @@
-h2 {
-    color: #444;
-    font-weight: lighter;
+body, html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
 }
 
 body, input[text], button {
-    color: white;
-    font-family: Cambria, Georgia;
+    color: #4D4D4D;
+    font-family: sans-serif;
     background: #0079BF;
 }
 
-button {
-    padding: 0.2em;
-    font-size: 14px
+my-board-content {
+    flex: 1;
+    overflow-x: scroll;
 }
 
-* {
-    font-family: Arial;
+.top-bar {
+    background-color: #e6e6e6;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 16px;
+    padding: 10px 10px;
+}
+
+.add-btn{
+    background: linear-gradient(to bottom,#61bd4f 0,#5aac44 100%);
+    box-shadow: 0 1px 0 #3f6f21;
+    color: #fff;
+    min-height: 30px;
+    min-width: 60px;
+    border: none;
+    border-radius: 2px;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+.remove-btn{
+    color: darkgrey;
 }

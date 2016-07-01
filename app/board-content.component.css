@@ -1,29 +1,130 @@
 label {
   display: inline-block;
-  width: 3em;
-  margin: .5em 0;
-  color: #607D8B;
+  color: #4d4d4d;
   font-weight: bold;
 }
-input {
-  height: 2em;
-  font-size: 1em;
-  padding-left: .4em;
+.remove-btn{
+  right: 10px;
+  position: absolute;
+  cursor: pointer;
+  color: darkgray;
+  font-size: 14px;
 }
-button {
-  margin-top: 20px;
-  font-family: Arial;
-  background-color: #eee;
-  border: none;
-  padding: 5px 10px;
+
+.list {
+  background: #e2e4e6;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: inline-table;
+  max-height: 100%;
+  position: relative;
+  white-space: normal;
+  margin-left: 10px;
+  min-width: 280px;
+  padding: 10px 10px;
+}
+
+.boards-content {
+  display: flex;
+}
+
+.top-bar{
+  background: #0079BF;
+  color: white;
+}
+
+.task {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+  min-height: 20px;
+  position: relative;
+  z-index: 0;
+  color: #6F6E6E;
+  padding: 7px 8px;
+}
+
+.description{
+  font-size: 14px;
+  margin-top: 3px;
+  color: gray;
+}
+
+.task-description{
+  padding: 0 23px;
+}
+
+.title{
+  font-size: 15px;
+  font-weight: bold;
+  display: inline;
+}
+
+.createNewListBtn{
+  height: auto;
+  max-height: 20px;
+  padding: 10px;
+  border-radius: 3px;
+  margin: 0 10px;
+  color: whitesmoke;
+  background: #0067A3;
+  min-width: 250px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.createNewListInput{
+  margin: 0px 0px 10px 10px;
+  min-width: 250px;
+  border: 1px gainsboro solid;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 2px;
+  display: block;
+}
+
+.createNewTaskBtn {
+  padding-top: 10px;
+  color: #8c8c8c;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.createNewTaskBtn:hover {
+  color: darkgray;
+}
+
+.createNewTaskInput {
+  width: 228px;
+  display: block;
+  margin-top: 3px;
+  padding: 6px 5px;
+  font-size: 14px;
+  border: 1px solid gainsboro;
   border-radius: 4px;
-  cursor: pointer; cursor: hand;
 }
-button:hover {
-  background-color: #cfd8dc;
+.add-list-btn {
+  margin-left: 10px;
 }
-button:disabled {
-  background-color: #eee;
-  color: #ccc; 
-  cursor: auto;
+
+.task-form{
+  background: #cfd8dc;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+.list-form{
+  background: #0067A3;
+  height: 135px;
+  padding: 10px 10px 0px 0px;
+  margin-left: 10px;
+  border-radius: 4px;
+}
+
+.done{
+  text-decoration: line-through;
 }

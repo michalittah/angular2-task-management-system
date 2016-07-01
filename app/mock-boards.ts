@@ -2,7 +2,6 @@ import {Board} from './board';
 
 export var BOARDS:Board[] = [
     {
-        'id': 1,
         'title': 'board1',
         'list': [
             {
@@ -11,11 +10,13 @@ export var BOARDS:Board[] = [
                 tasks: [
                     {
                         'title': 'task1',
-                        'description': "bla bla"
+                        'description': "bla bla",
+                        'done':false
                     },
                     {
                         'title': 'task2',
-                        'description': "bla bla"
+                        'description': "bla bla",
+                        'done':false
                     }
                 ]
             },
@@ -25,18 +26,67 @@ export var BOARDS:Board[] = [
                 tasks: [
                     {
                         'title': 'task1',
-                        'description': "bla bla"
+                        'description': "bla bla",
+                        'done':false
                     },
                     {
                         'title': 'task2',
-                        'description': "bla bla"
+                        'description': "bla bla",
+                        'done':false
+                    }
+                ]
+            },
+            {
+                'title': 'list3',
+                'description': "bla bla",
+                tasks: [
+                    {
+                        'title': 'task1',
+                        'description': "bla bla",
+                        'done':false
+                    },
+                    {
+                        'title': 'task2',
+                        'description': "bla bla",
+                        'done':false
+                    }
+                ]
+            },
+            {
+                'title': 'list4',
+                'description': "bla bla",
+                tasks: [
+                    {
+                        'title': 'task1',
+                        'description': "bla bla",
+                        'done':false
+                    },
+                    {
+                        'title': 'task2',
+                        'description': "bla bla",
+                        'done':false
+                    }
+                ]
+            },
+            {
+                'title': 'list5',
+                'description': "bla bla",
+                tasks: [
+                    {
+                        'title': 'task1',
+                        'description': "bla bla",
+                        'done':false
+                    },
+                    {
+                        'title': 'task2',
+                        'description': "bla bla",
+                        'done':false
                     }
                 ]
             }
         ]
     },
     {
-        'id': 2,
         'title': 'board2',
         'list': [
             {
@@ -45,11 +95,13 @@ export var BOARDS:Board[] = [
                 tasks: [
                     {
                         'title': 'task1',
-                        'description': "bla bla"
+                        'description': "bla bla",
+                        'done':false
                     },
                     {
                         'title': 'task2',
-                        'description': "bla bla"
+                        'description': "bla bla",
+                        'done':false
                     }
                 ]
             },
@@ -59,11 +111,13 @@ export var BOARDS:Board[] = [
                 tasks: [
                     {
                         'title': 'task1',
-                        'description': "bla bla"
+                        'description': "bla bla",
+                        'done':false
                     },
                     {
                         'title': 'task2',
-                        'description': "bla bla"
+                        'description': "bla bla",
+                        'done':true
                     }
                 ]
             }
@@ -71,7 +125,6 @@ export var BOARDS:Board[] = [
     }
     ,
     {
-        'id': 3,
         'title': 'board3',
         'list': [
             {
@@ -80,25 +133,13 @@ export var BOARDS:Board[] = [
                 tasks: [
                     {
                         'title': 'task1',
-                        'description': "bla bla"
+                        'description': "bla bla",
+                        'done':false
                     },
                     {
                         'title': 'task2',
-                        'description': "bla bla"
-                    }
-                ]
-            },
-            {
-                'title': 'list2',
-                'description': "bla bla",
-                tasks: [
-                    {
-                        'title': 'task1',
-                        'description': "bla bla"
-                    },
-                    {
-                        'title': 'task2',
-                        'description': "bla bla"
+                        'description': "bla bla",
+                        'done':true
                     }
                 ]
             }

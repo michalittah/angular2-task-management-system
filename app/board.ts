@@ -1,6 +1,7 @@
 export class Task {
     title:string;
     description:string;
+    done:boolean;
 }
 
 export class List {
@@ -10,7 +11,6 @@ export class List {
 }
 
 export class Board {
-    id:number;
     title:string;
     list:List[];
 }
