@@ -40,7 +40,7 @@ export class BoardContentComponent implements OnInit {
     }
 
     addTask(title:string, description:string, boardTitle:string, listTitle:string, index:number) {
-        this._boardService.addTask({'title': title, 'description': description}, boardTitle, listTitle);
+        this._boardService.addTask({'title': title, 'description': description,'done':false}, boardTitle, listTitle);
         this.taskTitle[index] = "";
         this.taskDescription[index] = "";
         this.toggleTaskForm(index);

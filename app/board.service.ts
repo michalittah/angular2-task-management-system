@@ -5,7 +5,8 @@ import {Task} from './board';
 import {List} from './board';
 // import {BOARDS} from './mock-boards';
 
-import {LocalStorage, SessionStorage} from "./localStorage/WebStorage";
+//import {LocalStorage, SessionStorage} from "./localStorage/WebStorage";
+import {LocalStorage, SessionStorage} from "./local-storage/WebStorage";
 
 @Injectable()
 export class BoardService {
