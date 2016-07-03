@@ -1,0 +1,26 @@
+<div *ngIf="list" class="my-list">
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <div>{{list.title}}</div>
+            <div class="description">{{list.description || "no description"}}</div>
+        </div>
+    </div>
+    <div class="list-content">
+        <div id="test{{i}}" class="task" *ngFor="#task of list.tasks;#i=index;"
+             (onGesture)="doSwipe($event,i, board.title,list.title)" hammer-gestures>
+            <input type="checkbox" [(ngModel)]="task.done"/>
+                <span (click)="removeTask(i, board.title,list.title)" class="remove-btn">
+                    <i class="fa fa-times" aria-hidden="true"></i></span>
+            <div class="title" [ngClass]="{done: task.done}">{{task.title}}</div>
+            <div class="description task-description" [ngClass]="{done: task.done}">{{task.description}}</div>
+        </div>
+
+        <div *ngIf="!isTaskForm[i]" class="createNewTaskBtn" (click)="toggleTaskForm(i)">create new task...</div>
+        <form class="task-form" *ngIf="isTaskForm[i]"
+              (ngSubmit)="addTask(taskTitle[i],taskDescription[i],board.title,list.title,i)">
+            <input class="createNewTaskInput" [(ngModel)]="taskTitle[i]" placeholder="task title" required/>
+            <input class="createNewTaskInput" [(ngModel)]="taskDescription[i]" placeholder="task description"/>
+            <button class="add-btn" type="submit">Add</button>
+        </form>
+    </div>
+</div>

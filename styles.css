@@ -17,6 +17,12 @@ my-board-content {
     overflow-x: scroll;
 }
 
+my-list-content {
+    background: whitesmoke;
+    margin: 20px auto;
+    padding: 20px;
+}
+
 .top-bar {
     background-color: #e6e6e6;
     font-weight: bold;
@@ -25,8 +31,8 @@ my-board-content {
     padding: 10px 10px;
 }
 
-.add-btn{
-    background: linear-gradient(to bottom,#61bd4f 0,#5aac44 100%);
+.add-btn {
+    background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
     box-shadow: 0 1px 0 #3f6f21;
     color: #fff;
     min-height: 30px;
@@ -38,6 +44,6 @@ my-board-content {
     display: block;
 }
 
-.remove-btn{
+.remove-btn {
     color: darkgrey;
 }

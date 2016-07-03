@@ -1,19 +1,14 @@
 import {Injectable} from 'angular2/core';
-
-import {Board} from './board';
-import {Task} from './board';
-import {List} from './board';
-// import {BOARDS} from './mock-boards';
-
-//import {LocalStorage, SessionStorage} from "./localStorage/WebStorage";
-import {LocalStorage, SessionStorage} from "./local-storage/WebStorage";
+import {Board} from '../board';
+import {Task} from '../board';
+import {List} from '../board';
+import {LocalStorage} from "./local-storage/WebStorage";
 
 @Injectable()
 export class BoardService {
 
     @LocalStorage() public BOARDS:Board[]=[];
-
-
+    
     getBoards() {
         return Promise.resolve(this.BOARDS);
     }

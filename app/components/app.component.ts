@@ -3,12 +3,13 @@ import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router'
 
 import {DashboardComponent} from './dashboard.component';
 import {BoardContentComponent} from './board-content.component';
-import {BoardService} from './board.service';
+import {ListContentComponent} from './list-content.component';
+import {BoardService} from '../services/board.service';
 
 @Component({
     selector: 'my-app',
-    templateUrl: 'app/app.component.html',
-    styleUrls: ['app/app.component.css'],
+    templateUrl: 'app/templates/app.component.html',
+    styleUrls: ['app/css/app.component.css'],
     directives: [
         ROUTER_DIRECTIVES,
         DashboardComponent
@@ -23,6 +24,11 @@ import {BoardService} from './board.service';
         path: '/board/:title',
         name: 'BoardContent',
         component: BoardContentComponent
+    },
+    {
+        path: '/board/:boardTitle/list/:listTitle',
+        name: 'ListContent',
+        component: ListContentComponent
     }
 ])
 export class AppComponent {

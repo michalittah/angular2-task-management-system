@@ -5,7 +5,7 @@
   <head>
     <base href="/">
     <!-- #enddocregion base-href -->
-    <title>Angular 2 Tour of Heroes</title>
+    <title>Task Management System - Angular 2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- #enddocregion head -->
@@ -24,9 +24,12 @@
     <script src="node_modules/rxjs/bundles/Rx.js"></script>
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
 
+    <script src="node_modules/hammerjs/hammer.js"></script>
+
     <!-- #docregion router -->
     <script src="node_modules/angular2/bundles/router.dev.js"></script>
     <!-- #enddocregion router -->
+
     <script>
       System.config({packages: {app: {format: 'register', defaultExtension: 'js'}}});
       System.import('app/main')

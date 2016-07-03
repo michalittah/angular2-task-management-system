@@ -1,5 +1,5 @@
 {
-  "name": "angular2-tour-of-heroes",
+  "name": "Task Management System",
   "version": "0.0.1",
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
@@ -18,7 +18,8 @@
     "rxjs": "5.0.0-beta.6",
     "systemjs": "0.19.26",
     "zone.js": "0.6.12",
-    "tslint": "^3.7.4"
+    "tslint": "^3.7.4",
+    "hammerjs": "2.0.6"
   },
   "devDependencies": {
     "concurrently": "^2.0.0",

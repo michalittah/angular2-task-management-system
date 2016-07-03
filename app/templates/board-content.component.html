@@ -8,11 +8,12 @@
     <div class="boards-content">
         <div class="list" *ngFor="#list of board.list; #i=index;">
             <span (click)="removeList(i, board.title)" class="remove-btn"><i class="fa fa-times" aria-hidden="true"></i></span>
-            <div class="title">{{list.title}}</div>
+            <div class="title" (click)="gotoList(list.title,board.title)">{{list.title}}</div>
             <div class="description">{{list.description || "no description"}}</div>
             <div class="task" *ngFor="#task of list.tasks;">
-                <input type="checkbox" [(ngModel)]="task.done" />
-                <span (click)="removeTask(i, board.title,list.title)" class="remove-btn"><i class="fa fa-times" aria-hidden="true"></i></span>
+                <input type="checkbox" [(ngModel)]="task.done"/>
+                <span (click)="removeTask(i, board.title,list.title)" class="remove-btn"><i class="fa fa-times"
+                                                                                            aria-hidden="true"></i></span>
                 <div class="title" [ngClass]="{done: task.done}">{{task.title}}</div>
                 <div class="description task-description" [ngClass]="{done: task.done}">{{task.description}}</div>
             </div>
@@ -33,5 +34,4 @@
             <button class="add-btn add-list-btn" type="submit">Add</button>
         </form>
     </div>
-    <!--<button (click)="goBack()">Back</button>-->
 </div>
